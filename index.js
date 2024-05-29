@@ -10,7 +10,7 @@ const stripe = require('stripe')('sk_test_51PJVJZSGpZvoPybBYEufDLfAHcVXwiHaWRJug
 
 const app = express()
 app.use(cors({
-    origin : process.env.FRONTEND_URL,
+    origin : "https://frontend-g-wheat.vercel.app",
     credentials : true
 }))
 app.use(express.json())
