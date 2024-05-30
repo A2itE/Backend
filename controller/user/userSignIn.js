@@ -1,3 +1,4 @@
+const secureCookie = process.env.SECURE_COOKIE === 'true';
 const bcrypt = require('bcryptjs')
 const userModel = require('../../models/userModel')
 const jwt = require('jsonwebtoken');
@@ -32,7 +33,7 @@ async function userSignInController(req,res){
 
         const tokenOption = {
             httpOnly : true,
-            secure : true
+            secure : secureCookie
         }
 
         res.cookie("token",token,tokenOption).status(200).json({
