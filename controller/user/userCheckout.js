@@ -35,8 +35,8 @@ const userCheckout = async (req, res) => {
             payment_method_types: ["card"],
             line_items: lineItems,
             mode: "payment",
-            success_url: "http://localhost:3000/success",
-            cancel_url: "http://localhost:3000/cancel",
+            success_url: "https://frontend-g-wheat.vercel.app/success",
+            cancel_url: "https://frontend-g-wheat.vercel.app/cancel",
         });
 
         console.log("Checkout Session:", session); // Log created checkout session
